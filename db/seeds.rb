@@ -34,7 +34,7 @@ end
 
 
 
-50.times do
+6.times do
   Tool.create!(
     tool_name: Faker::ElectricalComponents.electromechanical,
     description: Faker::Lorem.sentence,
