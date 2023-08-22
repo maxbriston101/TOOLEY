@@ -8,16 +8,6 @@
 
 require 'faker'
 
-# <div class="container">
-#   <%= simple_form_for (@tool) do |f| %>
-#   <%= f.input :tool_name %>
-#   <%= f.input :description %>
-#   <%= f.input :category %>
-#   <%= f.input :price %>
-#   <%= f.submit %>
-#   <% end %>
-# </div>
-
 puts "cleaning database"
 Tool.destroy_all
 User.destroy_all
@@ -40,7 +30,9 @@ i = 1
     email: Faker::Internet.email,
     password: Faker::Internet.password
   )
+  i += 1
 end
+
 
 Tool.create(tool_name: "Lawn Mower", description: "Amazing to mow lawns, cuts grass like a machine made to cut grass", category: "Garden", price: 240, user_id: user_one.id)
 Tool.create(tool_name: "Fork Lift", description: "Very useful for lifting heavy stuff", category: "Warehouse", price: 1020, user_id: user_one.id)
@@ -60,3 +52,6 @@ Tool.create(tool_name: "Drill", description: "If you wanna drill something, is t
 #     user_id: rand(1..5)
 #   )
 # end
+
+
+

@@ -2,7 +2,10 @@
   <h1>List of Tools</h1>
   <ul>
   <% @tools.each do |tool| %>
-<li><%= tool.tool_name %></li>
+  <div class="container">
+    <li><%= tool.tool_name %></li>
+    <li><%= tool.price %></li>
+  </div>
   <% end %>
   </ul>
 </div>
