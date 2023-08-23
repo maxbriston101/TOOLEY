@@ -3,7 +3,7 @@
   <ul>
   <% @tools.each do |tool| %>
   <div class="container">
-    <li>hello
+    <li>
       <%= tool.tool_name %>
       <% if tool.bookings.empty? %>
         <%= link_to "Delete",
