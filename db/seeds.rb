@@ -52,6 +52,3 @@ Tool.create(tool_name: "Drill", description: "If you wanna drill something, is t
 #     user_id: rand(1..5)
 #   )
 # end
-
-
-
