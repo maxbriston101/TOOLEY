@@ -3,11 +3,16 @@
   <% i = 0 %>
 <% @tools.each do |tool| %>
   <ul>
-    <%# <%= image_tag() %>
-    <li><%= tool.tool_name %></li>
-    <li><%= tool.price %></li>
+    <div class="container">
+      <li><%=link_to tool.tool_name, tool_path(tool) %></li>
+      <li><%= tool.price %></li>
+       <%# <%= image_tag() %>
+    </div>
  </ul>
   <% i += 1 %>
   <% end %>
 
 </div>
+
+
+ <%# <li><%= link_to list.name, list_path(list) %>
