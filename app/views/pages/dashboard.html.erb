@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>My Tools</h1>
+  <ul>
+  <% @tools.each do |tool| %>
+  <div class="container">
+    <li>hello
+      <%= tool.tool_name %>
+      <% if tool.bookings.empty? %>
+        <%= link_to "Delete",
+          tool_path(tool),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      <% end %>
+    </li>
+  </div>
+  <% end %>
+  </ul>
+</div>
