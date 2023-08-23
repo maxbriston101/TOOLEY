@@ -1,11 +1,13 @@
 <div class="container">
   <h1>List of Tools</h1>
+  <% i = 0 %>
+<% @tools.each do |tool| %>
   <ul>
-  <% @tools.each do |tool| %>
-  <div class="container">
+    <%# <%= image_tag() %>
     <li><%= tool.tool_name %></li>
     <li><%= tool.price %></li>
-  </div>
+ </ul>
+  <% i += 1 %>
   <% end %>
-  </ul>
+
 </div>
