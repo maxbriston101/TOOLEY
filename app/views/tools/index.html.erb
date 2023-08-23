@@ -3,9 +3,12 @@
   <ul>
   <% @tools.each do |tool| %>
   <div class="container">
-    <li><%= tool.tool_name %></li>
-    <li><%= tool.price %></li>
+    <li><%=link_to tool.tool_name, tool_path(tool) %></li>
+    <%= tool.price %>
   </div>
   <% end %>
   </ul>
 </div>
+
+
+ <%# <li><%= link_to list.name, list_path(list) %>

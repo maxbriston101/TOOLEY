@@ -16,7 +16,7 @@ class ToolsController < ApplicationController
     @tool = Tool.new(tool_params)
     @tool.user = current_user
     if @tool.save
-      redirect_to tools_path
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
