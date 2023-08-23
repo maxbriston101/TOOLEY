@@ -35,6 +35,7 @@ i = 1
 end
 
 
+
 Tool.create(tool_name: "Lawn Mower", description: "
   Introducing our premium Lawn Mower, available for rent!
   Experience the epitome of efficiency and convenience in lawn maintenance
@@ -93,6 +94,7 @@ Tool.create(tool_name: "Drill", description: "Introducing our high-quality Drill
     it's perfect for projects of all sizes. Rent our Drill today and experience
     the satisfaction of effortlessly drilling through various materials,
     making your projects a hole lot easier!", category: "Building", price: 15, user_id: user_one.id)
+
 
 
 # 6.times do
