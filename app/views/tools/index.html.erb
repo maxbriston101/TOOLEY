@@ -1,16 +1,19 @@
-<div class="container tools-index">
-  <h1>List of Tools</h1>
-  <% i = 0 %>
-<% @tools.each do |tool| %>
-  <ul>
-    <div class="container">
-      <li><%=link_to tool.tool_name, tool_path(tool) %></li>
-      <li><%= tool.price %></li>
-       <%# <%= image_tag() %>
-    </div>
- </ul>
-  <% i += 1 %>
-  <% end %>
+<div class="container">
+
+  <h1>Tools To Rent</h1>
+
+  <div class="row">
+    <% @tools.each do |tool| %>
+      <div class="col-3">
+        <%# <ul> %>
+        <%= image_tag tool.image, width: 300, height: 300, class: "tool-images" if tool.image %>
+        <div>
+          <p> <%= link_to tool.tool_name, tool_path(tool) %> </p>
+        </div>
+        <%# </ul> %>
+      </div>
+    <% end %>
+  </div>
 
 </div>
 
