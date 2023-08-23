@@ -9,6 +9,7 @@
 require 'faker'
 
 puts "cleaning database"
+Booking.destroy_all
 Tool.destroy_all
 User.destroy_all
 
@@ -52,6 +53,3 @@ Tool.create(tool_name: "Drill", description: "If you wanna drill something, is t
 #     user_id: rand(1..5)
 #   )
 # end
-
-
-

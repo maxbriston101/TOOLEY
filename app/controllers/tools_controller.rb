@@ -22,6 +22,13 @@ class ToolsController < ApplicationController
     end
   end
 
+  def destroy
+    @tool = Tool.find(params[:id])
+    @tool.destroy
+    # No need for app/views/restaurants/destroy.html.erb
+    redirect_to dashboard_path, status: :see_other
+  end
+
   private
 
   def tool_params
