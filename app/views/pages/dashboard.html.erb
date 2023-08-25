@@ -1,18 +1,16 @@
-<div class="container">
-  <h1>My Tools</h1>
-  <ul>
-  <% @tools.each do |tool| %>
-  <div class="container">
-    <li>
-      <%= tool.tool_name %>
-      <% if tool.bookings.empty? %>
-        <%= link_to "Delete",
-          tool_path(tool),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-        %>
-      <% end %>
-    </li>
+<div class="container-fluid h-full d-flex justify-content-center dashboard-container">
+  <div class="p-3" id="custom-container">
+    <h1 class="text-center m-5" id="title">My Tools</h1>
+    <% @tools.each do |tool| %>
+      <div class="card-product-show m-5">
+        <%= image_tag tool.image, id: "img"%>
+        <div id="card-product-show-infos">
+          <h2><%= tool.tool_name %></h2>
+          <p><%= tool.description %></p>
+          </div>
+            <%= link_to "Delete", tool_path(tool),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, id: "delete-button"%>
+        </div>
+    <% end %>
   </div>
-  <% end %>
-  </ul>
 </div>

@@ -1,0 +1,56 @@
+.dashboard-container {
+  background-color: rgb(90, 65, 53);
+  #title{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+
+
+.card-product-show {
+  overflow: hidden;
+  height: 180px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  #card-product-show-infos {
+    padding: 16px;
+  }
+  #img {
+    height: 100%;
+    width: 180px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+}
+
+#delete-button {
+  padding: 4px 8px;
+  background-color: rgb(211, 128, 128);
+  margin-right: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+#custom-container {
+  // margin-top: -48px;
+  width: 80%;
+  background-color:rgb(90, 65, 53)
+
+}
