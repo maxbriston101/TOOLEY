@@ -1,10 +1,16 @@
-<div class="container">
-  <%= simple_form_for (@tool) do |f| %>
-  <%= f.input :tool_name %>
-  <%= f.input :description %>
-  <%= f.input :category %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-  <% end %>
+<div class="showbgimg">
+  <div class="showcard m-5 p-5">
+    <div class="text-center">
+      <div class="container">
+        <%= simple_form_for (@tool) do |f| %>
+        <%= f.input :tool_name %>
+        <%= f.input :description %>
+        <%= f.input :category %>
+        <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
