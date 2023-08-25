@@ -1,19 +1,39 @@
 // Import page-specific CSS files here.
-@import "home";
 @import "show";
 @import "dashboard";
+@import "home";
 
+.index-background {
+// background-image: url("index3bg.jpeg");
+// background-color: black;
+background-color:rgb(90, 65, 53);
+}
 
-.tools-index {
-display: flex;
-align-content: space-between;
-gap: 20px 20px;
+.card-title {
+background-color:rgb(90, 65, 53);
+// text-decoration: none;
+padding: 10px 20px;
+color: white;
+border-radius: 10%;
+text-decoration: dotted;
+
+}
+#tool-name {
+  text-decoration: none;
+}
+.card-body {
+  // text-decoration: none;
+}
+// .tools-index {
+// display: flex;
+// align-content: space-between;
+// gap: 20px 20px;
 
 // display: space-evenly;
 
+// jnknkn?
 
-
-}
+// }
 
 
 

@@ -1,6 +1,6 @@
 <div class="showbgimg">
-  <div class="container p-5 " style="width: 800px">
-    <div class="showcard">
+  <%# <div class="container"> %>
+    <div class="showcard m-5 p-5">
         <div class="text-center">
           <h1>
           <%= @tool.tool_name %>
@@ -11,20 +11,31 @@
               <p>
                 <%= @tool.description %>
               </p>
-        </div>
+              <p>
 
 
-        <div data-controller="toggle" class="container  p-5" style="width: 800px">
-            <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book your tool!</button>
+                  <% if @tool.photo.attached? %>
+                  <%= cl_image_tag @tool.photo.key,  width: 600, class: "tool-images"%>
+                  <% else %>
+                  <%= image_tag @tool.image, width: 600, class: "tool-images" if @tool.image%>
+                  <% end %>
+              </p>
 
-          <div data-toggle-target="togglableElement" class="booking-form d-none">
-            <%= simple_form_for [@tool, @booking] do |f| %>
-            <%= f.input :start_date, html5: true %>
-            <%= f.input :end_date, html5: true %>
-            <%= f.submit %>
-            <% end %>
+            <div data-controller="toggle" class="container  p-5" style="width: 800px">
+              <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book your tool!</button>
+              <div data-toggle-target="togglableElement" class="booking-form d-none">
+                <%= simple_form_for [@tool, @booking] do |f| %>
+                <%= f.input :start_date, html5: true %>
+                <%= f.input :end_date, html5: true %>
+                <%= f.submit %>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
+
+
+
     </div>
-  </div>
+  <%# </div> %>
 </div>

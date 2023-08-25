@@ -1,25 +1,26 @@
-<div class="container">
+<div class="index-background">
 
-  <h1>Tools To Rent</h1>
+  <div class="container">
+    <h1>Tools To Rent</h1>
 
-  <div class="row">
-    <% @tools.each do |tool| %>
-      <div class="col-12 col-sm-6 col-lg-4 p-3">
-        <%# <ul> %>
-        <% if tool.photo.attached? %>
-        <%= cl_image_tag tool.photo.key,  width: 300, height: 300, class: "tool-images"%>
-        <% else %>
-        <%= image_tag tool.image, width: 300, height: 300, class: "tool-images" if tool.image %>
-        <% end %>
-        <div>
-          <p> <%= link_to tool.tool_name, tool_path(tool) %> </p>
+    <div class="row">
+      <% @tools.each do |tool| %>
+        <div class="col-4">
+          <%= link_to tool_path(tool) do %>
+            <div class="card flex-column no-gutters my-3">
+              <% if tool.photo.attached? %>
+              <%= cl_image_tag tool.photo.key,  width: 300, height: 300, class: "card-img-top"%>
+              <% else %>
+              <%= image_tag tool.image, class: "card-img-top", id: "card-image-index" if tool.image %>
+              <% end %>
+              <div class="card-body d-flex justify-content-between">
+                <h5 class="card-title "><%= tool.tool_name %> </h5>
+                <h5 class="card-price"> £<%=  tool.price %> </h5>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <%# </ul> %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-
 </div>
-
-
- <%# <li><%= link_to list.name, list_path(list) %>
