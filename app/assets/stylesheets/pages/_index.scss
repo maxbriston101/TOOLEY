@@ -2,6 +2,7 @@
 @import "show";
 @import "home";
 
+
 .index-background {
 // background-image: url("index3bg.jpeg");
 // background-color: black;
@@ -22,6 +23,12 @@ text-decoration: dotted;
 }
 
 
+// ... More customization as needed
+
+// Import Bootstrap after customizations
+
+
+
 // .tools-index {
 // display: flex;
 // align-content: space-between;
@@ -36,3 +43,4 @@ text-decoration: dotted;
 
 
 // lawnmower forklift cement mixer chainsaw boomlift drill
+// @import '~bootstrap/scss/bootstrap';
