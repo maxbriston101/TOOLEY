@@ -1,7 +1,7 @@
-<div class="showbgimg">
-  <div class="showcard m-5 p-5">
-    <div class="text-center">
-      <div class="container">
+<div id= "wraper">
+<div><h1>Add New Tool</h1></div>
+  <div class="showbgimg2">
+      <div class="showcard m-5 p-5">
         <%= simple_form_for (@tool) do |f| %>
         <%= f.input :tool_name %>
         <%= f.input :description %>
@@ -11,6 +11,5 @@
         <%= f.submit %>
         <% end %>
       </div>
-    </div>
   </div>
 </div>
